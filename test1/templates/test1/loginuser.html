@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container mt-4 text-center">
+        <h2 class="alert alert-primary text-center">Login Form</h2>
+
+        {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <button class="btn btn-primary" type="submit">Login</button>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
