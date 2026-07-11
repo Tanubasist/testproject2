@@ -97,32 +97,57 @@
             transform: scale(1.02);
         }
     
-        /* 📌 Navbar Modern Layout Formatting */
+        /* 📌 Navbar Refined & Slim Layout Configuration */
         .navbar {
             background-color: var(--text-black) !important;
-            padding: 20px 0 !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 10px 0 !important; /* Vertical height kam kar di */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
-    
+        
+        /* DINEX ke naam ko clean aur elegant banane ke liye */
         .navbar .navbar-brand {
+            font-size: 1.3rem !important; /* Size balanced kiya */
             font-weight: 700 !important;
-            letter-spacing: 2px;
+            font-style: normal !important; /* Italic effect ko simple clean kiya */
+            letter-spacing: 3px !important; /* Premium branding look */
             text-transform: uppercase;
             color: var(--bg-beige) !important;
+            font-family: 'Montserrat', sans-serif !important;
         }
-    
+
+        /* Nav links aur buttons ka size compress karne ke liye */
         .navbar .nav-link {
-            font-weight: 400 !important;
+            font-size: 0.85rem !important; /* Chota aur standard size */
+            font-weight: 500 !important;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #CFCFCF !important;
-            margin-right: 15px;
+            color: #D1C9BC !important; /* Soft beige tone text */
+            margin-right: 10px;
             transition: color 0.3s ease;
         }
-    
+
         .navbar .nav-link:hover {
             color: var(--bg-beige) !important;
+        }
+
+        /* Welcome Text & Dynamic Buttons inside Navbar */
+        .navbar text, .navbar span, .navbar .navbar-text {
+            font-size: 0.85rem !important;
+            color: #CFCFCF !important;
+        }
+
+        /* Input search boxes aur normal small buttons inline scaling */
+        .navbar .btn {
+            font-size: 0.8rem !important;
+            padding: 6px 14px !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        .navbar .form-control {
+            font-size: 0.85rem !important;
+            padding: 5px 10px !important;
+            border-radius: 4px !important;
         }
     </style>
 </head>
