@@ -8,142 +8,140 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    <style>
+        /* Course-Compliant Contact Page Refinement */
+        :root {
+            --bg-beige: #FAF7F2;
+            /* Soft Premium Beige */
+            --text-black: #111111;
+            /* Elegant Matte Black */
+            --card-bg: #FFFFFF;
+            /* Pure White for boxes */
+            --border-color: #E6DFD3;
+            /* Subtle design divider */
+        }
+
+        body {
+            background-color: var(--bg-beige) !important;
+            color: var(--text-black) !important;
+            font-family: 'Poppins', 'Montserrat', sans-serif !important;
+        }
+
+        /* 📌 Top Heading Box Styling Override (Removed blue container box completely) */
+        .container h1.alert-primary {
+            background-color: transparent !important;
+            border: none !important;
+            color: var(--text-black) !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: 4px !important;
+            text-transform: uppercase;
+            font-size: 2.2rem !important;
+            margin-top: 50px !important;
+            margin-bottom: 40px !important;
+            padding: 0 !important;
+        }
+
+        /* 📜 Left Side: Quote & Restaurant Info Box */
+        .col-md-6 h5.display-6 {
+            font-size: 1.5rem !important;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 25px !important;
+            color: #555555;
+        }
+
+        .col-md-6 h5:not(.display-6) {
+            font-size: 1rem !important;
+            font-weight: 500;
+            margin-bottom: 12px !important;
+            color: var(--text-black);
+            letter-spacing: 0.3px;
+        }
+
+        /* 🗺️ Right Side: Map Framing Alignment */
+        iframe {
+            border: 1px solid var(--border-color) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
+        }
+
+        /* ❓ Sub-heading: Have Some Questions? */
+        .container h2.text-center {
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 1.6rem !important;
+            font-weight: 600 !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 50px !important;
+            margin-bottom: 25px !important;
+        }
+
+        /* 📝 Refined Form Layout Container */
+        form {
+            max-width: 650px;
+            margin: 0 auto 60px auto;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
+        }
+
+        /* Inputs layout spacing & matte borders */
+        form .form-control {
+            background-color: #FFFFFF !important;
+            border: 1px solid var(--border-color) !important;
+            color: var(--text-black) !important;
+            border-radius: 6px !important;
+            padding: 12px 15px !important;
+            font-size: 0.95rem !important;
+            margin-bottom: 15px !important;
+            transition: border-color 0.3s ease !important;
+        }
+
+        form .form-control:focus {
+            border-color: var(--text-black) !important;
+            box-shadow: none !important;
+        }
+
+        /* Message textarea alternative padding */
+        form input[placeholder="Enter Your Message"] {
+            padding-bottom: 50px !important;
+        }
+
+        /* 🖤 Matte Black Send Message Action Button */
+        form .btn-primary {
+            background-color: var(--text-black) !important;
+            color: var(--bg-beige) !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 12px 30px !important;
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase;
+            width: 100% !important;
+            transition: background-color 0.3s ease, transform 0.2s ease !important;
+            margin-top: 5px;
+        }
+
+        form .btn-primary:hover {
+            background-color: #2D2D2D !important;
+            color: #FFFFFF !important;
+        }
+    </style>
 </head>
-
-<style>
-    /* Course-Compliant Contact Page Refinement */
-    :root {
-        --bg-beige: #FAF7F2;
-        /* Soft Premium Beige */
-        --text-black: #111111;
-        /* Elegant Matte Black */
-        --card-bg: #FFFFFF;
-        /* Pure White for boxes */
-        --border-color: #E6DFD3;
-        /* Subtle design divider */
-    }
-
-    body {
-        background-color: var(--bg-beige) !important;
-        color: var(--text-black) !important;
-        font-family: 'Poppins', 'Montserrat', sans-serif !important;
-    }
-
-    /* 📌 Top Heading Box Styling */
-    .container h1.alert-primary {
-        background-color: transparent !important;
-        border: none !important;
-        color: var(--text-black) !important;
-        font-family: 'Montserrat', sans-serif !important;
-        font-weight: 700 !important;
-        letter-spacing: 4px !important;
-        text-transform: uppercase;
-        font-size: 2.2rem !important;
-        margin-top: 40px !important;
-        margin-bottom: 40px !important;
-        padding: 0 !important;
-    }
-
-    /* 📜 Left Side: Quote & Restaurant Info Box */
-    .col-md-6 h5.display-6 {
-        font-size: 1.5rem !important;
-        font-style: italic;
-        font-weight: 400;
-        line-height: 1.4;
-        margin-bottom: 25px !important;
-        color: #555555;
-    }
-
-    .col-md-6 h5:not(.display-6) {
-        font-size: 1rem !important;
-        font-weight: 500;
-        margin-bottom: 12px !important;
-        color: var(--text-black);
-        letter-spacing: 0.3px;
-    }
-
-    /* 🗺️ Right Side: Map Framing */
-    iframe {
-        border: 1px solid var(--border-color) !important;
-        border-radius: 12px !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
-    }
-
-    /* ❓ Sub-heading: Have Some Questions? */
-    .container h2.text-center {
-        font-family: 'Montserrat', sans-serif !important;
-        font-size: 1.6rem !important;
-        font-weight: 600 !important;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-top: 50px !important;
-        margin-bottom: 25px !important;
-    }
-
-    /* 📝 Refined Form Layout */
-    form {
-        max-width: 650px;
-        margin: 0 auto 60px auto;
-        background-color: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
-    }
-
-    /* Inputs spacing & borders */
-    form .form-control {
-        background-color: #FFFFFF !important;
-        border: 1px solid var(--border-color) !important;
-        color: var(--text-black) !important;
-        border-radius: 6px !important;
-        padding: 12px 15px !important;
-        font-size: 0.95rem !important;
-        margin-bottom: 15px !important;
-        /* Saare inputs ke beech uniform space */
-        transition: border-color 0.3s ease !important;
-    }
-
-    form .form-control:focus {
-        border-color: var(--text-black) !important;
-        box-shadow: none !important;
-    }
-
-    /* Message box ko thoda height dene ke liye automatically target kiya */
-    form input[placeholder="Enter Your Message"] {
-        padding-bottom: 50px !important;
-        /* Standard placeholder layout spacing */
-    }
-
-    /* 🖤 Matte Black Send Message Button */
-    form .btn-primary {
-        background-color: var(--text-black) !important;
-        color: var(--bg-beige) !important;
-        border: none !important;
-        border-radius: 6px !important;
-        padding: 12px 30px !important;
-        font-size: 0.85rem !important;
-        font-weight: 500 !important;
-        letter-spacing: 1px !important;
-        text-transform: uppercase;
-        width: 100% !important;
-        transition: background-color 0.3s ease, transform 0.2s ease !important;
-        margin-top: 5px;
-    }
-
-    form .btn-primary:hover {
-        background-color: #2D2D2D !important;
-        color: #FFFFFF !important;
-    }
-</style>
 
 <body>
 
     {% include 'test1/navbar.html' %}
+
     <div class="container">
         <h1 class="alert alert-primary text-center mt-2">Contact Us</h1>
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
                 <h5 class="display-6">"A restaurant is where flavors meet friendships"</h5>
                 <h5>Email: abc@gmail.com</h5>
                 <h5>Phone: +91 1234567890</h5>
@@ -151,26 +149,27 @@
                 <h5>Operating Hours: 10:00 AM - 11:00 PM, all seven days</h5>
             </div>
             <div class="col-md-6">
-                <!-- map of restraunt   -->
+                <!-- map of restaurant -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14022.151598689306!2d77.19862448556015!3d28.523547611585922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1f0dd053fdd%3A0x97d95c1a5860139f!2sSaket%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1783419564401!5m2!1sen!2sin"
                     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="strict-origin-when-cross-origin"></iframe>
-
             </div>
         </div>
+
         <h2 class="mt-2 text-center">Have Some Questions?</h2>
+
         <form method="post">
-            <input placeholder="Enter Your Name" class="form-control">
-            <input placeholder="Enter Your Email" class="form-control">
-            <input placeholder="Enter Your Message" class="form-control">
+            {% csrf_token %}
+            <input placeholder="Enter Your Name" class="form-control" name="name" required>
+            <input placeholder="Enter Your Email" class="form-control" name="email" type="email" required>
+            <input placeholder="Enter Your Message" class="form-control" name="message" required>
             <button class="btn btn-primary" type="submit">Send Message</button>
         </form>
     </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    </body>
-    
-    </html>
+
+</body>
+
+</html>
