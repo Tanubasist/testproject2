@@ -10,6 +10,133 @@
 
 </head>
 
+<style>
+    /* Course-Compliant Contact Page Refinement */
+    :root {
+        --bg-beige: #FAF7F2;
+        /* Soft Premium Beige */
+        --text-black: #111111;
+        /* Elegant Matte Black */
+        --card-bg: #FFFFFF;
+        /* Pure White for boxes */
+        --border-color: #E6DFD3;
+        /* Subtle design divider */
+    }
+
+    body {
+        background-color: var(--bg-beige) !important;
+        color: var(--text-black) !important;
+        font-family: 'Poppins', 'Montserrat', sans-serif !important;
+    }
+
+    /* 📌 Top Heading Box Styling */
+    .container h1.alert-primary {
+        background-color: transparent !important;
+        border: none !important;
+        color: var(--text-black) !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 4px !important;
+        text-transform: uppercase;
+        font-size: 2.2rem !important;
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+        padding: 0 !important;
+    }
+
+    /* 📜 Left Side: Quote & Restaurant Info Box */
+    .col-md-6 h5.display-6 {
+        font-size: 1.5rem !important;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 25px !important;
+        color: #555555;
+    }
+
+    .col-md-6 h5:not(.display-6) {
+        font-size: 1rem !important;
+        font-weight: 500;
+        margin-bottom: 12px !important;
+        color: var(--text-black);
+        letter-spacing: 0.3px;
+    }
+
+    /* 🗺️ Right Side: Map Framing */
+    iframe {
+        border: 1px solid var(--border-color) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
+    }
+
+    /* ❓ Sub-heading: Have Some Questions? */
+    .container h2.text-center {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 1.6rem !important;
+        font-weight: 600 !important;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 50px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* 📝 Refined Form Layout */
+    form {
+        max-width: 650px;
+        margin: 0 auto 60px auto;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
+    }
+
+    /* Inputs spacing & borders */
+    form .form-control {
+        background-color: #FFFFFF !important;
+        border: 1px solid var(--border-color) !important;
+        color: var(--text-black) !important;
+        border-radius: 6px !important;
+        padding: 12px 15px !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 15px !important;
+        /* Saare inputs ke beech uniform space */
+        transition: border-color 0.3s ease !important;
+    }
+
+    form .form-control:focus {
+        border-color: var(--text-black) !important;
+        box-shadow: none !important;
+    }
+
+    /* Message box ko thoda height dene ke liye automatically target kiya */
+    form input[placeholder="Enter Your Message"] {
+        padding-bottom: 50px !important;
+        /* Standard placeholder layout spacing */
+    }
+
+    /* 🖤 Matte Black Send Message Button */
+    form .btn-primary {
+        background-color: var(--text-black) !important;
+        color: var(--bg-beige) !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 12px 30px !important;
+        font-size: 0.85rem !important;
+        font-weight: 500 !important;
+        letter-spacing: 1px !important;
+        text-transform: uppercase;
+        width: 100% !important;
+        transition: background-color 0.3s ease, transform 0.2s ease !important;
+        margin-top: 5px;
+    }
+
+    form .btn-primary:hover {
+        background-color: #2D2D2D !important;
+        color: #FFFFFF !important;
+    }
+</style>
+
 <body>
 
     {% include 'test1/navbar.html' %}
