@@ -9,70 +9,119 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        /* Course-Compliant Black & Beige Theme Setup */
+        /* Course-Compliant High-End Black & Beige Premium UI Theme Setup */
         :root {
-            --bg-beige: #F9F6F0;
-            /* Soft Premium Beige */
-            --text-black: #1A1A1A;
-            /* Elegant Matte Black */
+            --bg-beige: #FAF7F2;
+            /* Ultra Premium Milk-Beige */
+            --text-black: #111111;
+            /* Deep Luxurious Charcoal Black */
             --card-bg: #FFFFFF;
-            /* Pure White for crisp details */
-            --border-color: #EAE2D5;
-            /* Subtle design divider */
+            /* Crisp White for clean asset contrast */
+            --border-color: #E6DFD3;
+            /* Sophisticated Soft Border Accent */
         }
     
-        /* Pure Global Override without breaking structure */
+        /* Full Background & Font Enhancement */
         body {
             background-color: var(--bg-beige) !important;
             color: var(--text-black) !important;
+            font-family: 'Poppins', 'Helvetica Neue', sans-serif !important;
+            letter-spacing: 0.3px;
         }
     
-        /* Sir ka exact slider image logic */
+        /* 📸 Sir's Slider Logic: Modest Framing with Soft Border Radius */
         .carousel-item img {
-            height: 400px;
+            height: 450px;
             object-fit: cover;
+            border-radius: 12px;
         }
     
-        /* Cards ki images ko standard ratio mein fit rakhne ke liye */
-        .card-img-top {
-            height: 220px;
-            object-fit: cover;
+        .carousel {
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
     
-        /* Bootstrap Bootstrap components formatting override */
+        /* 🛍️ Modest & Classy Product Cards Upgrade */
         .card {
             background-color: var(--card-bg) !important;
             border: 1px solid var(--border-color) !important;
-            border-radius: 8px !important;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+            border-radius: 12px !important;
+            padding: 8px;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015) !important;
         }
     
-        /* Classy Matte Black Buttons */
+        /* Card Image Fit without breaking ratios */
+        .card-img-top {
+            height: 280px !important;
+            object-fit: cover !important;
+            border-radius: 8px !important;
+        }
+    
+        /* Soft Hover Effect: Card jumps out elegantly like premium sites */
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(26, 26, 26, 0.06) !important;
+            border-color: #D3C9B7 !important;
+        }
+    
+        /* 🏷️ Card Text Styling */
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 10px;
+        }
+    
+        /* 🖤 Solid High-End Minimalist Action Buttons */
         .btn-primary,
         .btn-dark,
         button[type="submit"] {
             background-color: var(--text-black) !important;
             color: var(--bg-beige) !important;
-            border: 1px solid var(--text-black) !important;
-            border-radius: 4px !important;
-            transition: all 0.3s ease !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 12px 24px !important;
+            font-size: 0.9rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.2s ease !important;
         }
     
         .btn-primary:hover,
         .btn-dark:hover {
-            background-color: #333333 !important;
+            background-color: #2D2D2D !important;
             color: #FFFFFF !important;
-            border-color: #333333 !important;
+            transform: scale(1.02);
         }
     
-        /* Navbar aesthetic clean configuration */
+        /* 📌 Navbar Modern Layout Formatting */
         .navbar {
             background-color: var(--text-black) !important;
-            border-bottom: 1px solid var(--border-color) !important;
+            padding: 20px 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
     
-        .navbar .nav-link,
         .navbar .navbar-brand {
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--bg-beige) !important;
+        }
+    
+        .navbar .nav-link {
+            font-weight: 400 !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #CFCFCF !important;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+    
+        .navbar .nav-link:hover {
             color: var(--bg-beige) !important;
         }
     </style>
