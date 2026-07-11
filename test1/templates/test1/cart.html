@@ -91,9 +91,88 @@
     </div>
 
     <style>
-        .hover-link-title:hover {
-            color: goldenrod !important;
-            text-decoration: underline !important;
+        /* Course-Compliant Black & Beige Theme Setup */
+        :root {
+            --bg-beige: #FAF7F2;
+            /* Soft Premium Beige */
+            --text-black: #111111;
+            /* Elegant Matte Black */
+            --card-bg: #FFFFFF;
+            /* Pure White */
+            --border-color: #E6DFD3;
+            /* Subtle design divider */
+        }
+    
+        /* Full Background Override */
+        body {
+            background-color: var(--bg-beige) !important;
+            color: var(--text-black) !important;
+        }
+    
+        /* 📌 Navbar Refined & Slim Layout Configuration */
+        .navbar {
+            background-color: var(--text-black) !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+    
+        .navbar .navbar-brand {
+            font-size: 1.3rem !important;
+            font-weight: 700 !important;
+            font-style: normal !important;
+            letter-spacing: 3px !important;
+            text-transform: uppercase;
+            color: var(--bg-beige) !important;
+        }
+    
+        .navbar .nav-link {
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #D1C9BC !important;
+            margin-right: 10px;
+        }
+    
+        /* 🛍️ Cart Items, Tables and Containers */
+        .table,
+        .cart-wrapper,
+        .checkout-box {
+            background-color: var(--card-bg) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 12px !important;
+        }
+    
+        .table th,
+        .table td {
+            background-color: var(--card-bg) !important;
+            color: var(--text-black) !important;
+            border-bottom: 1px solid var(--border-color) !important;
+            padding: 15px !important;
+            vertical-align: middle;
+        }
+    
+        /* 🖤 Minimalist Action Buttons (Update Cart, Checkout, etc.) */
+        .btn-primary,
+        .btn-dark,
+        button[type="submit"],
+        .btn-checkout {
+            background-color: var(--text-black) !important;
+            color: var(--bg-beige) !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 10px 20px !important;
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase;
+            transition: all 0.3s ease !important;
+        }
+    
+        .btn-primary:hover,
+        .btn-dark:hover {
+            background-color: #333333 !important;
+            color: #FFFFFF !important;
         }
     </style>
 
