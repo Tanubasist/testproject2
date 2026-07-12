@@ -8,6 +8,14 @@
     <title>Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- 👑 Luxury Fonts Imported Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <style>
         /* Course-Compliant High-End Black & Beige Premium UI Theme Setup */
         :root {
@@ -27,18 +35,50 @@
             color: var(--text-black) !important;
             font-family: 'Poppins', 'Helvetica Neue', sans-serif !important;
             letter-spacing: 0.3px;
+            overflow-x: hidden;
         }
 
-        /* 📸 Sir's Slider Logic: Modest Framing with Soft Border Radius */
+        /* 📸 Slider Edge-to-Edge Responsive Fit Lock */
         .carousel-item img {
             height: 450px;
             object-fit: cover;
-            border-radius: 12px;
+            border-radius: 0px !important;
         }
 
         .carousel {
             margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Mobile responsive full-bleed alignment */
+        @media (max-width: 991.98px) {
+            .carousel-item img {
+                height: 300px;
+            }
+
+            .carousel,
+            .carousel-inner {
+                border-radius: 0px !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            .container {
+                max-width: 100% !important;
+                width: 100% !important;
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+
+            .row {
+                margin-left: -6px !important;
+                margin-right: -6px !important;
+            }
+
+            .col-12 {
+                padding-left: 6px !important;
+                padding-right: 6px !important;
+            }
         }
 
         /* 🛍️ Modest & Classy Product Cards Upgrade */
@@ -51,21 +91,18 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015) !important;
         }
 
-        /* Card Image Fit without breaking ratios */
         .card-img-top {
             height: 280px !important;
             object-fit: cover !important;
             border-radius: 8px !important;
         }
 
-        /* Soft Hover Effect: Card jumps out elegantly like premium sites */
         .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 30px rgba(26, 26, 26, 0.06) !important;
             border-color: #D3C9B7 !important;
         }
 
-        /* 🏷️ Card Text Styling */
         .card-title {
             font-size: 1.1rem;
             font-weight: 600;
@@ -148,14 +185,18 @@
             border-radius: 4px !important;
         }
 
-        /* Fixed Title Block Style Overrides */
+        /* ✨ Fixed Title Block Style Overrides - LUXURY EDIT */
         .products-title-heading {
             color: #111111 !important;
-            font-family: 'Montserrat', sans-serif !important;
-            font-weight: 700 !important;
-            letter-spacing: 4px !important;
-            text-transform: uppercase !important;
-            font-size: 2.2rem !important;
+            font-family: 'Playfair Display', serif !important;
+            /* Royal Luxury Font */
+            font-weight: 600 !important;
+            font-style: italic !important;
+            /* Luxury Serif brands typical styling */
+            letter-spacing: 2px !important;
+            text-transform: capitalize !important;
+            /* "Our Products" handles better with capitalization */
+            font-size: 2.6rem !important;
         }
     </style>
 </head>
@@ -207,10 +248,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="container mt-4">
 
+    <div class="container mt-4">
         <div class="row mb-4">
-            <!-- Fixed Inline Styles to Transparent/Beige Premium Setup -->
             <div class="col-12 text-center py-2" style="background-color: transparent; border-radius: 4px;">
                 <h2 class="m-0 products-title-heading">
                     Our Products
@@ -247,7 +287,6 @@
             </div>
             {% endfor %}
         </div>
-
     </div>
 
     {% include 'test1/footer.html' %}
