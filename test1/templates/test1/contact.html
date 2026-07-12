@@ -12,13 +12,9 @@
         /* Course-Compliant Contact Page Refinement */
         :root {
             --bg-beige: #FAF7F2;
-            /* Soft Premium Beige */
             --text-black: #111111;
-            /* Elegant Matte Black */
             --card-bg: #FFFFFF;
-            /* Pure White for boxes */
             --border-color: #E6DFD3;
-            /* Subtle design divider */
         }
 
         body {
@@ -27,7 +23,58 @@
             font-family: 'Poppins', 'Montserrat', sans-serif !important;
         }
 
-        /* 📌 Top Heading Box Styling Override (Removed blue container box completely) */
+        /* 📌 Strict Top Navbar Styling Fix Specific to Contact Page */
+        .navbar .navbar-right-container .btn,
+        .navbar .navbar-right-container button {
+            background-color: transparent !important;
+            color: #FAF7F2 !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            font-size: 0.8rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            padding: 6px 14px !important;
+            border-radius: 4px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 32px !important;
+            max-height: 32px !important;
+            width: auto !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .navbar .navbar-right-container .btn:hover,
+        .navbar .navbar-right-container button:hover {
+            background-color: #FAF7F2 !important;
+            color: #111111 !important;
+            border-color: #FAF7F2 !important;
+        }
+
+        .navbar .form-control {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            color: #FFFFFF !important;
+            font-size: 0.85rem !important;
+            height: 32px !important;
+            width: 150px !important;
+            border-radius: 4px !important;
+            display: inline-block !important;
+            padding: 5px 10px !important;
+        }
+
+        .navbar .nav-search-form {
+            display: flex !important;
+            align-items: center !important;
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            max-width: none !important;
+        }
+
+        /* 📌 Top Heading Box Styling Override */
         .container h1.alert-primary {
             background-color: transparent !important;
             border: none !important;
@@ -78,8 +125,8 @@
             margin-bottom: 25px !important;
         }
 
-        /* 📝 Refined Form Layout Container */
-        form {
+        /* 📝 Bottom Form Layout Container (Isolated from Navbar styling) */
+        form:not(.nav-search-form) {
             max-width: 650px;
             margin: 0 auto 60px auto;
             background-color: var(--card-bg);
@@ -89,8 +136,8 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
         }
 
-        /* Inputs layout spacing & matte borders */
-        form .form-control {
+        /* Bottom Contact form controls layout lock */
+        form:not(.nav-search-form) .form-control {
             background-color: #FFFFFF !important;
             border: 1px solid var(--border-color) !important;
             color: var(--text-black) !important;
@@ -98,21 +145,22 @@
             padding: 12px 15px !important;
             font-size: 0.95rem !important;
             margin-bottom: 15px !important;
+            height: auto !important;
+            width: 100% !important;
             transition: border-color 0.3s ease !important;
         }
 
-        form .form-control:focus {
+        form:not(.nav-search-form) .form-control:focus {
             border-color: var(--text-black) !important;
             box-shadow: none !important;
         }
 
-        /* Message textarea alternative padding */
-        form input[placeholder="Enter Your Message"] {
+        form:not(.nav-search-form) input[placeholder="Enter Your Message"] {
             padding-bottom: 50px !important;
         }
 
         /* 🖤 Matte Black Send Message Action Button */
-        form .btn-primary {
+        form:not(.nav-search-form) .btn-primary {
             background-color: var(--text-black) !important;
             color: var(--bg-beige) !important;
             border: none !important;
@@ -123,27 +171,26 @@
             letter-spacing: 1px !important;
             text-transform: uppercase;
             width: 100% !important;
+            height: auto !important;
+            max-height: none !important;
             transition: background-color 0.3s ease, transform 0.2s ease !important;
             margin-top: 5px;
         }
 
-        form .btn-primary:hover {
+        form:not(.nav-search-form) .btn-primary:hover {
             background-color: #2D2D2D !important;
             color: #FFFFFF !important;
         }
-        /* Ultimate Global Reset for Contact Template Elements */
-.alert-primary, [class*="alert-"], .alert {
-    background-color: transparent !important;
-    border: none !important;
-    color: #111111 !important;
-    box-shadow: none !important;
-}
 
-.btn-primary, button[type="submit"] {
-    background-color: #111111 !important;
-    color: #FAF7F2 !important;
-    border: none !important;
-}
+        /* Global Dynamic Form Resets */
+        .alert-primary,
+        [class*="alert-"],
+        .alert {
+            background-color: transparent !important;
+            border: none !important;
+            color: #111111 !important;
+            box-shadow: none !important;
+        }
     </style>
 </head>
 
