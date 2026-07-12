@@ -5,127 +5,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        /* 🎨 Global Uniform Premium Boutique Design */
+        .navbar {
+            background-color: #111111 !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+
+        /* DineX Logo Style Fix */
+        .navbar .navbar-brand {
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 3px !important;
+            text-transform: uppercase !important;
+            color: #FAF7F2 !important;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        /* Nav Links styling */
+        .navbar .nav-link {
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            color: #D1C9BC !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .navbar .nav-link:hover {
+            color: #FAF7F2 !important;
+        }
+
+        /* 🔐 Lock layout dimensions for all navbar actions to completely stop the white boxes */
+        .navbar-right-container .btn,
+        .navbar-right-container button {
+            background-color: transparent !important;
+            color: #FAF7F2 !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            font-size: 0.8rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            padding: 6px 14px !important;
+            border-radius: 4px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            height: 32px !important;
+            max-height: 32px !important;
+            width: auto !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .navbar-right-container .btn:hover,
+        .navbar-right-container button:hover {
+            background-color: #FAF7F2 !important;
+            color: #111111 !important;
+            border-color: #FAF7F2 !important;
+        }
+
+        /* Welcome text size matching */
+        .navbar-text-welcome {
+            font-size: 0.85rem !important;
+            color: #CFCFCF !important;
+        }
+
+        /* Slim Form Search Box Layout */
+        .nav-search-form {
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .navbar .form-control {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            color: #FFFFFF !important;
+            font-size: 0.85rem !important;
+            height: 32px !important;
+            width: 150px !important;
+            border-radius: 4px !important;
+        }
+
+        .navbar .form-control:focus {
+            border-color: #D1C9BC !important;
+            box-shadow: none !important;
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            color: #FFFFFF !important;
+        }
+
+        .navbar .form-control::placeholder {
+            color: #888888 !important;
+        }
+    </style>
 </head>
 
-<style>
-    /* Global Navbar Uniform Premium Design */
-    .navbar {
-        background-color: #111111 !important;
-        padding: 12px 0 !important;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-    }
-
-    .navbar .navbar-brand {
-        font-size: 1.4rem !important;
-        font-weight: 700 !important;
-        font-style: normal !important;
-        letter-spacing: 3px !important;
-        text-transform: uppercase !important;
-        color: #FAF7F2 !important;
-        font-family: 'Montserrat', 'Helvetica Neue', sans-serif !important;
-    }
-
-    .navbar .nav-link {
-        font-size: 0.85rem !important;
-        font-weight: 500 !important;
-        letter-spacing: 1px !important;
-        text-transform: uppercase !important;
-        color: #D1C9BC !important;
-    }
-
-    .navbar .nav-link:hover {
-        color: #FAF7F2 !important;
-    }
-
-    /* Logout aur Search buttons ka blue/green rang hatane ke liye */
-    .navbar .btn-primary,
-    .navbar .btn-outline-success,
-    .navbar .btn {
-        background-color: transparent !important;
-        color: #FAF7F2 !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
-        font-size: 0.8rem !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.5px !important;
-        padding: 6px 14px !important;
-        border-radius: 4px !important;
-        transition: all 0.3s ease !important;
-    }
-
-    .navbar .btn:hover {
-        background-color: #FAF7F2 !important;
-        color: #111111 !important;
-    }
-
-    .navbar .form-control {
-        background-color: rgba(255, 255, 255, 0.05) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        color: #FFFFFF !important;
-        font-size: 0.85rem !important;
-    }
-
-    .navbar .form-control::placeholder {
-        color: #888888 !important;
-    }
-</style>
 <body>
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}" style="color: goldenrod; font-family: 'Dancing Script'; font-size: 1.4rem;">DineX</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <!-- Fixed: Inline styles removed to allow premium style override -->
+            <a class="navbar-brand" href="{% url 'home' %}">DineX</a>
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{% url 'home' %}" style="color: white;">Home</a>
-                </li
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products' %}" style="color: white;">Products</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- Fixed missing closing tag bracket here -->
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'contact' %}" style="color: white;">Contact</a>
-                </li>
-            </ul>
+                <!-- Right Side Main Content Actions Wrapper -->
+                <div class="d-flex align-items-center gap-3 navbar-right-container">
+                    {% if user.is_authenticated %}
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="navbar-text-welcome text-white">Welcome {{ user.username }}</span>
+                        <a class="btn" href="{% url 'view_cart' %}">
+                            <i class="bi bi-cart3 me-1"></i> Cart
+                        </a>
+                        <form method="post" action="{% url 'logoutuser' %}" class="m-0">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </div>
+                    {% else %}
+                    <div class="d-flex align-items-center gap-2">
+                        <form class="m-0" action="{% url 'loginuser' %}" method="get">
+                            {% csrf_token %}
+                            <button type="submit">Login</button>
+                        </form>
+                        <form class="m-0" action="{% url 'signupuser' %}" method="get">
+                            {% csrf_token %}
+                            <button type="submit">Signup</button>
+                        </form>
+                    </div>
+                    {% endif %}
 
-            {% if user.is_authenticated %}
-            <div class="d-flex align-items-center">
-                <p class="mt-3 px-2 text-white mb-0">Welcome {{ user.username }}</p>
-            
-                <a class="btn btn-outline-warning btn-sm mx-2" href="{% url 'view_cart' %}">
-                    <i class="bi bi-cart3"></i> Cart
-                </a>
-            
-                <form method="post" action="{% url 'logoutuser' %}" class="m-0">
-                    {% csrf_token %}
-                    <button class="btn btn-primary btn-sm" type="submit">Logout</button>
-                </form>
+                    <!-- Search Input Field Form -->
+                    <form class="nav-search-form gap-1 m-0" role="search" method="post"
+                        action="{% url 'find_product' %}">
+                        {% csrf_token %}
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                            name="prod_search">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
             </div>
-            {% else %}
-            <div class="d-flex align-items-center">
-                <form class="px-2 m-0" action="{% url 'loginuser' %}" method="get">
-                    {% csrf_token %}
-                    <button class="btn btn-primary btn-sm" type="submit">Login</button>
-                </form>
-            
-                <form class="m-0" action="{% url 'signupuser' %}" method="get">
-                    {% csrf_token %}
-                    <button class="btn btn-primary btn-sm" type="submit">Signup</button>
-                </form>
-            </div>
-            {% endif %}
-            
-            <form class="d-flex px-2 m-0" role="search" method="post" action="{% url 'find_product' %}">
-                {% csrf_token %}
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="prod_search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            </div>
-            </div>
-            </nav>
+        </div>
+    </nav>
+</body>
+
+</html>
