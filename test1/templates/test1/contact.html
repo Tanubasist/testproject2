@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <style>
-        /* Course-Compliant Contact Page Refinement */
+        /* 🎨 Global Aesthetic Theme Layout */
         :root {
             --bg-beige: #FAF7F2;
             --text-black: #111111;
@@ -23,7 +23,34 @@
             font-family: 'Poppins', 'Montserrat', sans-serif !important;
         }
 
-        /* 📌 Strict Top Navbar Styling Fix Specific to Contact Page */
+        /* 📌 Strict Top Navbar Layout Scaling Lock (Exact same as home/product) */
+        .navbar {
+            background-color: #111111 !important;
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 1.4rem !important;
+            font-weight: 700 !important;
+            letter-spacing: 3px !important;
+            text-transform: uppercase !important;
+            line-height: 1.2 !important;
+            color: #FAF7F2 !important;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+
+        .navbar .nav-link {
+            font-size: 0.85rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 1px !important;
+            text-transform: uppercase !important;
+            padding: 6px 12px !important;
+            line-height: 1.4 !important;
+            color: #D1C9BC !important;
+        }
+
+        /* 🔐 Force-stopping button sizing stretch inside Top Nav */
         .navbar .navbar-right-container .btn,
         .navbar .navbar-right-container button {
             background-color: transparent !important;
@@ -32,7 +59,7 @@
             font-size: 0.8rem !important;
             text-transform: uppercase !important;
             letter-spacing: 0.5px !important;
-            padding: 6px 14px !important;
+            padding: 4px 12px !important;
             border-radius: 4px !important;
             display: inline-flex !important;
             align-items: center !important;
@@ -40,6 +67,7 @@
             height: 32px !important;
             max-height: 32px !important;
             width: auto !important;
+            line-height: 1 !important;
             box-shadow: none !important;
             transition: all 0.3s ease !important;
         }
@@ -51,16 +79,24 @@
             border-color: #FAF7F2 !important;
         }
 
+        .navbar .navbar-text-welcome {
+            font-size: 0.85rem !important;
+            line-height: 32px !important;
+            display: inline-block !important;
+            color: #CFCFCF !important;
+        }
+
+        /* Slim Search Bar sizing sync */
         .navbar .form-control {
             background-color: rgba(255, 255, 255, 0.05) !important;
             border: 1px solid rgba(255, 255, 255, 0.15) !important;
             color: #FFFFFF !important;
             font-size: 0.85rem !important;
             height: 32px !important;
-            width: 150px !important;
+            width: 140px !important;
             border-radius: 4px !important;
+            padding: 4px 10px !important;
             display: inline-block !important;
-            padding: 5px 10px !important;
         }
 
         .navbar .nav-search-form {
@@ -74,7 +110,7 @@
             max-width: none !important;
         }
 
-        /* 📌 Top Heading Box Styling Override */
+        /* 📌 Main Content Elements Style Override */
         .container h1.alert-primary {
             background-color: transparent !important;
             border: none !important;
@@ -87,9 +123,10 @@
             margin-top: 50px !important;
             margin-bottom: 40px !important;
             padding: 0 !important;
+            text-align: center;
         }
 
-        /* 📜 Left Side: Quote & Restaurant Info Box */
+        /* 📜 Left Side Information text layout */
         .col-md-6 h5.display-6 {
             font-size: 1.5rem !important;
             font-style: italic;
@@ -107,14 +144,13 @@
             letter-spacing: 0.3px;
         }
 
-        /* 🗺️ Right Side: Map Framing Alignment */
+        /* 🗺️ Map Container Styling */
         iframe {
             border: 1px solid var(--border-color) !important;
             border-radius: 12px !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
         }
 
-        /* ❓ Sub-heading: Have Some Questions? */
         .container h2.text-center {
             font-family: 'Montserrat', sans-serif !important;
             font-size: 1.6rem !important;
@@ -125,19 +161,18 @@
             margin-bottom: 25px !important;
         }
 
-        /* 📝 Bottom Form Layout Container (Isolated from Navbar styling) */
-        form:not(.nav-search-form) {
+        /* 📝 Bottom Form Box - Completely Isolated from Top Navbar Form styles */
+        .contact-form {
             max-width: 650px;
             margin: 0 auto 60px auto;
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
+            background-color: var(--card-bg) !important;
+            border: 1px solid var(--border-color) !important;
+            border-radius: 12px !important;
+            padding: 30px !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01) !important;
         }
 
-        /* Bottom Contact form controls layout lock */
-        form:not(.nav-search-form) .form-control {
+        .contact-form .form-control {
             background-color: #FFFFFF !important;
             border: 1px solid var(--border-color) !important;
             color: var(--text-black) !important;
@@ -150,17 +185,16 @@
             transition: border-color 0.3s ease !important;
         }
 
-        form:not(.nav-search-form) .form-control:focus {
+        .contact-form .form-control:focus {
             border-color: var(--text-black) !important;
             box-shadow: none !important;
         }
 
-        form:not(.nav-search-form) input[placeholder="Enter Your Message"] {
+        .contact-form input[placeholder="Enter Your Message"] {
             padding-bottom: 50px !important;
         }
 
-        /* 🖤 Matte Black Send Message Action Button */
-        form:not(.nav-search-form) .btn-primary {
+        .contact-form .btn-primary {
             background-color: var(--text-black) !important;
             color: var(--bg-beige) !important;
             border: none !important;
@@ -177,12 +211,11 @@
             margin-top: 5px;
         }
 
-        form:not(.nav-search-form) .btn-primary:hover {
+        .contact-form .btn-primary:hover {
             background-color: #2D2D2D !important;
             color: #FFFFFF !important;
         }
 
-        /* Global Dynamic Form Resets */
         .alert-primary,
         [class*="alert-"],
         .alert {
@@ -209,7 +242,7 @@
                 <h5>Operating Hours: 10:00 AM - 11:00 PM, all seven days</h5>
             </div>
             <div class="col-md-6">
-                <!-- map of restaurant -->
+                <!-- Google Maps Frame -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14022.151598689306!2d77.19862448556015!3d28.523547611585922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1f0dd053fdd%3A0x97d95c1a5860139f!2sSaket%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1783419564401!5m2!1sen!2sin"
                     width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
@@ -219,7 +252,7 @@
 
         <h2 class="mt-2 text-center">Have Some Questions?</h2>
 
-        <form method="post">
+        <form method="post" class="contact-form">
             {% csrf_token %}
             <input placeholder="Enter Your Name" class="form-control" name="name" required>
             <input placeholder="Enter Your Email" class="form-control" name="email" type="email" required>
