@@ -20,7 +20,7 @@
             --border-color: #E6DFD3;
             /* Sophisticated Soft Border Accent */
         }
-    
+
         /* Full Background & Font Enhancement */
         body {
             background-color: var(--bg-beige) !important;
@@ -28,19 +28,19 @@
             font-family: 'Poppins', 'Helvetica Neue', sans-serif !important;
             letter-spacing: 0.3px;
         }
-    
+
         /* 📸 Sir's Slider Logic: Modest Framing with Soft Border Radius */
         .carousel-item img {
             height: 450px;
             object-fit: cover;
             border-radius: 12px;
         }
-    
+
         .carousel {
             margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
         }
-    
+
         /* 🛍️ Modest & Classy Product Cards Upgrade */
         .card {
             background-color: var(--card-bg) !important;
@@ -50,21 +50,21 @@
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015) !important;
         }
-    
+
         /* Card Image Fit without breaking ratios */
         .card-img-top {
             height: 280px !important;
             object-fit: cover !important;
             border-radius: 8px !important;
         }
-    
+
         /* Soft Hover Effect: Card jumps out elegantly like premium sites */
         .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 30px rgba(26, 26, 26, 0.06) !important;
             border-color: #D3C9B7 !important;
         }
-    
+
         /* 🏷️ Card Text Styling */
         .card-title {
             font-size: 1.1rem;
@@ -73,7 +73,7 @@
             letter-spacing: 0.8px;
             margin-top: 10px;
         }
-    
+
         /* 🖤 Solid High-End Minimalist Action Buttons */
         .btn-primary,
         .btn-dark,
@@ -89,40 +89,38 @@
             text-transform: uppercase;
             transition: background-color 0.3s ease, transform 0.2s ease !important;
         }
-    
+
         .btn-primary:hover,
         .btn-dark:hover {
             background-color: #2D2D2D !important;
             color: #FFFFFF !important;
             transform: scale(1.02);
         }
-    
+
         /* 📌 Navbar Refined & Slim Layout Configuration */
         .navbar {
             background-color: var(--text-black) !important;
-            padding: 10px 0 !important; /* Vertical height kam kar di */
+            padding: 10px 0 !important;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
-        
-        /* DINEX ke naam ko clean aur elegant banane ke liye */
+
         .navbar .navbar-brand {
-            font-size: 1.3rem !important; /* Size balanced kiya */
+            font-size: 1.3rem !important;
             font-weight: 700 !important;
-            font-style: normal !important; /* Italic effect ko simple clean kiya */
-            letter-spacing: 3px !important; /* Premium branding look */
+            font-style: normal !important;
+            letter-spacing: 3px !important;
             text-transform: uppercase;
             color: var(--bg-beige) !important;
             font-family: 'Montserrat', sans-serif !important;
         }
 
-        /* Nav links aur buttons ka size compress karne ke liye */
         .navbar .nav-link {
-            font-size: 0.85rem !important; /* Chota aur standard size */
+            font-size: 0.85rem !important;
             font-weight: 500 !important;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #D1C9BC !important; /* Soft beige tone text */
+            color: #D1C9BC !important;
             margin-right: 10px;
             transition: color 0.3s ease;
         }
@@ -131,13 +129,13 @@
             color: var(--bg-beige) !important;
         }
 
-        /* Welcome Text & Dynamic Buttons inside Navbar */
-        .navbar text, .navbar span, .navbar .navbar-text {
+        .navbar text,
+        .navbar span,
+        .navbar .navbar-text {
             font-size: 0.85rem !important;
             color: #CFCFCF !important;
         }
 
-        /* Input search boxes aur normal small buttons inline scaling */
         .navbar .btn {
             font-size: 0.8rem !important;
             padding: 6px 14px !important;
@@ -149,37 +147,16 @@
             padding: 5px 10px !important;
             border-radius: 4px !important;
         }
-        /* Home page blue strip remover and formatting */
-    .container h1.alert, .alert-primary {
-        background-color: transparent !important;
-        border: none !important;
-        color: #111111 !important;
-        font-family: 'Montserrat', sans-serif !important;
-        font-weight: 700 !important;
-        letter-spacing: 4px !important;
-        text-transform: uppercase;
-        font-size: 2.2rem !important;
-        margin-top: 40px !important;
-        padding: 0 !important;
-        text-align: center;
-    }
-    /* 🏷️ "Our Products" Heading Box Style Fix */
-.container h1.alert-primary, 
-.container .alert-primary {
-    background-color: transparent !important;
-    border: none !important;
-    color: #111111 !important; /* Premium Matte Black */
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 700 !important;
-    letter-spacing: 4px !important;
-    text-transform: uppercase;
-    font-size: 2.2rem !important;
-    margin-top: 40px !important;
-    margin-bottom: 40px !important;
-    padding: 0 !important;
-    text-align: center;
-    box-shadow: none !important;
-}
+
+        /* Fixed Title Block Style Overrides */
+        .products-title-heading {
+            color: #111111 !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-weight: 700 !important;
+            letter-spacing: 4px !important;
+            text-transform: uppercase !important;
+            font-size: 2.2rem !important;
+        }
     </style>
 </head>
 
@@ -233,8 +210,9 @@
     <div class="container mt-4">
 
         <div class="row mb-4">
-            <div class="col-12 text-center py-2" style="background-color: #cfe2ff; border-radius: 4px;">
-                <h2 class="m-0" style="color: #084298; font-family: sans-serif; font-weight: 500;">
+            <!-- Fixed Inline Styles to Transparent/Beige Premium Setup -->
+            <div class="col-12 text-center py-2" style="background-color: transparent; border-radius: 4px;">
+                <h2 class="m-0 products-title-heading">
                     Our Products
                 </h2>
             </div>
